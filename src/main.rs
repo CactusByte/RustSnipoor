@@ -10,7 +10,7 @@ use chrono::Local;
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     // Solana WebSocket URL for subscribing to logs.
-    let solana_ws_url = "wss://broken-dry-pallet.solana-mainnet.quiknode.pro/8507eae1eca7061ec8143f9d03236c9fc06d4d1f/";
+    let solana_ws_url = "wss://endpoint_ws_provider";
     let wss_url = Url::parse(solana_ws_url)?;
 
     // Connect to the Solana WebSocket endpoint.
@@ -76,7 +76,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 async fn fetch_transaction_details(transaction_signature: &str) -> Result<Value, Box<dyn std::error::Error>> {
     let client = reqwest::Client::new();
-    let solana_rpc_url = "https://broken-dry-pallet.solana-mainnet.quiknode.pro/8507eae1eca7061ec8143f9d03236c9fc06d4d1f/"; // Adjust for mainnet or testnet if necessary
+    let solana_rpc_url = "https: https_provider"; // Adjust for mainnet or testnet if necessary
     let request_body = json!({
         "jsonrpc": "2.0",
         "id": 1,
